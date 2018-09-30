@@ -1,8 +1,12 @@
 # Anki 2.1 Add-on - Set Font Size
 
-This add-on allows you to set the font size for the UI in Anki 2.1.x. Go to Tools &gt; Add-ons &gt; Increase Font Size &gt; Config then change the value of <code>font_size</code> to the desired size (in pixels.)
+This add-on allows you to set the font size for the UI in Anki 2.1.x. Go to Tools &gt; Add-ons &gt; Set Font Size &gt; Config then change the value of <code>font_size</code> to the desired size (in pixels.) Please restart Anki after installing the add-on or setting the font size for the change to take effect.
 
-This add-on was ported from the <a href="https://ankiweb.net/shared/info/1333758373">Increase Font Size add-on for Anki 2.0.x by Damien Elmes</a>. If you would like to contribute, to source repository is available on <a href="https://github.com/cjhoward/anki-set-font-size">GitHub</a>.
+This add-on was ported from the <a href="https://ankiweb.net/shared/info/1333758373" rel="nofollow">Increase Font Size add-on for Anki 2.0.x by Damien Elmes</a>. If you would like to contribute, the source repository is available on <a href="https://github.com/cjhoward/anki-set-font-size" rel="nofollow">GitHub</a>.
+
+## Install
+
+Check out the page for this add-on on <a href="https://ankiweb.net/shared/info/651521808">AnkiWeb</a> for information on how to install this add-on.
 
 ## License
 
