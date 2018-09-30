@@ -6,7 +6,7 @@ This add-on was ported from the <a href="https://ankiweb.net/shared/info/1333758
 
 ## Install
 
-Check out the page for this add-on on <a href="https://ankiweb.net/shared/info/651521808">AnkiWeb</a> for information on how to install this add-on.
+Check out the page for this add-on on <a href="https://ankiweb.net/shared/info/651521808">AnkiWeb</a> for installation details.
 
 ## License
 
