@@ -27,9 +27,15 @@ def changeGlobalFontSize(font_size):
     QApplication.setFont(font)
 
 def changeWebFontSize(font_size):
-    wes = QWebEngineSettings.globalSettings()
-    #wes.setFontSize(QWebEngineSettings.DefaultFontSize, font_size)
-    wes.setFontSize(QWebEngineSettings.MinimumFontSize, font_size)
+	try:
+		# Qt6
+		wes = QWebEngineProfile.defaultProfile().settings()
+	except AttributeError:
+		# Qt5
+		wes = QWebEngineSettings.globalSettings()
+	
+	#wes.setFontSize(QWebEngineSettings.DefaultFontSize, font_size)
+	wes.setFontSize(QWebEngineSettings.MinimumFontSize, font_size)
 
 def changeFontSize(config):
     font_size = config['font_size']
@@ -38,4 +44,4 @@ def changeFontSize(config):
 
 changeFontSize(mw.addonManager.getConfig(__name__))
 
-mw.addonManager.setConfigUpdatedAction(__name__,changeFontSize)
+mw.addonManager.setConfigUpdatedAction(__name__, changeFontSize)
