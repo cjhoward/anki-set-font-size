@@ -33,9 +33,13 @@ def changeWebFontSize(font_size):
 	except AttributeError:
 		# Qt5
 		wes = QWebEngineSettings.globalSettings()
-	
-	#wes.setFontSize(QWebEngineSettings.DefaultFontSize, font_size)
-	wes.setFontSize(QWebEngineSettings.MinimumFontSize, font_size)
+
+	try:
+		#wes.setFontSize(QWebEngineSettings.FontSize.DefaultFontSize, font_size)
+		wes.setFontSize(QWebEngineSettings.FontSize.MinimumFontSize, font_size)
+	except AttributeError:
+		#wes.setFontSize(QWebEngineSettings.DefaultFontSize, font_size)
+		wes.setFontSize(QWebEngineSettings.MinimumFontSize, font_size)
 
 def changeFontSize(config):
     font_size = config['font_size']
