@@ -36,8 +36,12 @@ def changeWebFontSize(font_size):
         # Qt5
         wes = QWebEngineSettings.globalSettings()
 
-    # wes.setFontSize(QWebEngineSettings.DefaultFontSize, font_size)
-    wes.setFontSize(QWebEngineSettings.FontSize.MinimumFontSize, font_size)
+    # include the patch from Robin Pham:
+    # https://github.com/robin-pham/anki-set-font-size/blob/patch-1/__init__.py
+    if hasattr(QWebEngineSettings, 'MinimumFontSize'):
+		wes.setFontSize(QWebEngineSettings.MinimumFontSize, font_size)
+	elif hasattr(QWebEngineSettings, 'FontSize'):
+		wes.setFontSize(QWebEngineSettings.FontSize.MinimumFontSize, font_size)
 
 
 def changeFontSize(config):
