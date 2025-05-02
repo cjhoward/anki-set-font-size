@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2018  Christopher James Howard
+# Copyright (C) 2025 C. J. Howard
 # 
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -34,8 +34,7 @@ def changeWebFontSize(font_size):
 		# Qt5
 		wes = QWebEngineSettings.globalSettings()
 	
-	#wes.setFontSize(QWebEngineSettings.DefaultFontSize, font_size)
-	wes.setFontSize(QWebEngineSettings.MinimumFontSize, font_size)
+	wes.setFontSize(QWebEngineSettings.FontSize.MinimumFontSize, font_size)
 
 def changeFontSize(config):
     font_size = config['font_size']
